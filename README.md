@@ -9,8 +9,8 @@ I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/Suici
 - r/SuicideWatch – A support community for individuals experiencing suicidal thoughts and seeking help.  
 - r/mentalhealth – Discusses various mental health conditions, coping mechanisms, and general well-being.  
 
-I took a 1000 of the newest posts from these 5 subreddits.    
-
+I took a 1000 of the newest posts from these 5 subreddits. So I collected a total of 5000 posts    
+https://praw.readthedocs.io/en/latest/code_overview/models/submission.html  
 The information I collected from the posts is: 
 - id: ID of the post  
 - subreddit: Name of the subreddit where the post was posted  
