@@ -36,7 +36,12 @@ The 'selftext' field was processed by me in the following steps
   
 This processed text was saved in the column called proctext.   
 
-I carried out sentiment analysis on this processed text using TextBlob.   
+I carried out sentiment analysis on this processed text using TextBlob. The posts were classified as Neutral, Postive, Negative
+| Sentiment Label        | Number of Posts |
+|-------------------|----------------|
+| Positive | 42           |
+| Neutral      | 2019             |
+| Negative        | 2867              | 
 
 I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
@@ -45,9 +50,9 @@ Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to
 
 | Risk Level        | Number of Posts |
 |-------------------|----------------|
-| Moderate Concern | 4869           |
-| Low Concern      | 52             |
-| High-Risk        | 7              |  
+| Moderate Concern | 3970           |
+| Low Concern      | 913             |
+| High-Risk        | 45              |  
 
 Deliverables for:  
 Task 1  
