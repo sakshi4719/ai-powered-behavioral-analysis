@@ -1,6 +1,7 @@
 ### AI-Powered Behavioral Analysis for Suicide Prevention, Substance Use, and Mental Health Crisis Detection with Longitudinal Geospatial Crisis Trend Analysis
 
-I used  PRAW, the Python Reddit API Wrapper to get posts from Reddit.   
+I used  PRAW, the Python Reddit API Wrapper to get posts from Reddit.    
+https://praw.readthedocs.io/en/latest/code_overview/models/submission.html   
 
 I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/SuicideWatch, r/mentalhealth.  
 - r/depression – A space for individuals to share experiences, seek support, and discuss coping with depression.  
@@ -10,7 +11,7 @@ I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/Suici
 - r/mentalhealth – Discusses various mental health conditions, coping mechanisms, and general well-being.  
 
 I took a 1000 of the newest posts from these 5 subreddits. So I collected a total of 5000 posts.    
-https://praw.readthedocs.io/en/latest/code_overview/models/submission.html  
+
 The information I collected from the posts is: 
 - id: ID of the post  
 - subreddit: Name of the subreddit where the post was posted  
