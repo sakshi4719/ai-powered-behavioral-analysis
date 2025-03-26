@@ -32,15 +32,20 @@ The 'selftext' field was processed by me in the following steps
 - contraction expansion
 - stop word removal
 - stemming
-- lemmatization
+- lemmatization   
+  
 This processed text was saved in the column called proctext.   
 
-I carried out sentiment analysis on this  processed text using TextBlob.   
+I carried out sentiment analysis on this processed text using TextBlob.   
 
 I tried using TF-IDF to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using BERT tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
-detected crisis terms and classified the posts into High, Moderate and Low Concern posts.
-
+detected crisis terms and classified the posts.
+| Risk Level        | Number of Posts |
+|-------------------|----------------|
+| Moderate Concern | 4869           |
+| Low Concern      | 52             |
+| High-Risk        | 7              |
 
 Deliverables for:  
 Task 1  
@@ -60,3 +65,5 @@ Here is the plot generated after extracting the locations using the stanza libra
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 As an Indian, the results for India make sense to me, as most of the posts are limited to the metropolitan cities in India where more people have access to the internet, phones and live an urban lifestyle.
+
+Libraries/Tools used : PRAW, 
