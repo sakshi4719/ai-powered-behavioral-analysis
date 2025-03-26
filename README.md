@@ -60,7 +60,7 @@ Task 2
 
 Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
-- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html**
+- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html** , **ner_extracted_location.csv**
 
 Here is the plot generated after extracting the locations using the **Stanza** library 
 
