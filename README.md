@@ -66,5 +66,6 @@ Here is the plot generated after extracting the locations using the **Stanza** l
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
-As an Indian, the results for India make sense to me, as most of the posts are limited to the metropolitan cities in India where more people have access to the internet, phones and live an urban lifestyle.
-
+Future Scope: 
+- This project can be extended to add slang and censored words that come up due to social media censoring.
+- A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
