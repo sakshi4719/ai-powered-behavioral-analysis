@@ -1,6 +1,6 @@
 ### AI-Powered Behavioral Analysis for Suicide Prevention, Substance Use, and Mental Health Crisis Detection with Longitudinal Geospatial Crisis Trend Analysis
 
-I used  PRAW, the Python Reddit API Wrapper to get posts from Reddit.    
+I used  **PRAW**, the Python Reddit API Wrapper to get posts from Reddit.    
 https://praw.readthedocs.io/en/latest/code_overview/models/submission.html   
 
 I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/SuicideWatch, r/mentalhealth.  
@@ -38,29 +38,31 @@ This processed text was saved in the column called proctext.
 
 I carried out sentiment analysis on this processed text using TextBlob.   
 
-I tried using TF-IDF to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
-Then, I switched to using BERT tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
-detected crisis terms and classified the posts.
+I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
+Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
+I defined some crisis terms and classified the posts based on their similarity to the crisis terms.   
+Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to a .csv file.
+
 | Risk Level        | Number of Posts |
 |-------------------|----------------|
 | Moderate Concern | 4869           |
 | Low Concern      | 52             |
-| High-Risk        | 7              |
+| High-Risk        | 7              |  
 
 Deliverables for:  
 Task 1  
-- [x]  A Python script that retrieves and stores filtered social media posts : reddit-data.ipynb
-- [x]  A cleaned dataset ready for NLP analysis. - processed-reddit_data.csv
+- [x]  A Python script that retrieves and stores filtered social media posts : **reddit-data.ipynb**
+- [x]  A cleaned dataset ready for NLP analysis : **processed-reddit_data.csv**
 
 Task 2
-- [x] A script that classifies posts based on sentiment and risk level : data-preprocessing.ipynb
-- [x] A table or plot showing the distribution of posts by sentiment and risk category : 
+- [x] A script that classifies posts based on sentiment and risk level : **data-preprocessing.ipynb** 
+- [x] A table or plot showing the distribution of posts by sentiment and risk category : **distribution_of_posts.csv**   
 
 Task 3
-- [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : crisis-geoloc-mapping.ipynb
-- [x] A visualization of regional distress patterns in the dataset : crisis_heatmap.html
+- [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
+- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html**
 
-Here is the plot generated after extracting the locations using the Stanza library
+Here is the plot generated after extracting the locations using the **Stanza** library 
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
