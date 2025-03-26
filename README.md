@@ -53,17 +53,16 @@ Task 1
 - [x]  A cleaned dataset ready for NLP analysis. - processed-reddit_data.csv
 
 Task 2
-- [x] A script that classifies posts based on sentiment and risk level : data-processing.ipynb
-- [x] A table or plot showing the distribution of posts by sentiment and risk category :
+- [x] A script that classifies posts based on sentiment and risk level : data-preprocessing.ipynb
+- [x] A table or plot showing the distribution of posts by sentiment and risk category : 
 
 Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : crisis-geoloc-mapping.ipynb
 - [x] A visualization of regional distress patterns in the dataset : crisis_heatmap.html
 
-Here is the plot generated after extracting the locations using the stanza library
+Here is the plot generated after extracting the locations using the Stanza library
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 As an Indian, the results for India make sense to me, as most of the posts are limited to the metropolitan cities in India where more people have access to the internet, phones and live an urban lifestyle.
 
-Libraries/Tools used : PRAW, 
