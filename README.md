@@ -74,3 +74,5 @@ Here is the plot generated after extracting the locations using the **Stanza** l
 Future Scope: 
 - This project can be extended to add slang and censored words that come up due to social media censoring.
 - A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
+- Fine-tune a BERT model on crisis-related labeled data.
+- Use RoBERTa/ DistilBERT which are trained on mental health datasets.
