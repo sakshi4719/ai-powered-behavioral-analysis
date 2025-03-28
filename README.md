@@ -46,17 +46,17 @@ I carried out sentiment analysis on this processed text using **TextBlob**. The 
 I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
 I defined some crisis terms and classified the posts based on their similarity to the crisis terms.   
-Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to a .csv file.
-
-Here is the plot generated after extracting the locations using the **Stanza** library 
-
-![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
+Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to a .csv file.   
 
 | Risk Level        | Number of Posts |
 |-------------------|----------------|
 | Moderate Concern | 3970           |
 | Low Concern      | 913             |
-| High-Risk        | 45              |  
+| High-Risk        | 45              |   
+
+Here is the plot generated after extracting the locations using the **Stanza** library 
+
+![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 Deliverables for:  
 Task 1  
