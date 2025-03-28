@@ -36,7 +36,7 @@ The 'selftext' field was processed by me in the following steps
   
 This processed text was saved in the column called proctext.   
 
-I carried out sentiment analysis on this processed text using TextBlob. The posts were classified as Neutral, Postive, Negative
+I carried out sentiment analysis on this processed text using **TextBlob**. The posts were classified as Neutral, Postive, Negative
 | Sentiment Label        | Number of Posts |
 |-------------------|----------------|
 | Positive | 42           |
@@ -47,6 +47,10 @@ I tried using **TF-IDF** to detect crisis terms but this approach did not work a
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
 I defined some crisis terms and classified the posts based on their similarity to the crisis terms.   
 Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to a .csv file.
+
+Here is the plot generated after extracting the locations using the **Stanza** library 
+
+![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 | Risk Level        | Number of Posts |
 |-------------------|----------------|
@@ -66,10 +70,6 @@ Task 2
 Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
 - [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html** , **ner_extracted_location.csv**
-
-Here is the plot generated after extracting the locations using the **Stanza** library 
-
-![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 Future Scope: 
 - This project can be extended to add slang and censored words that come up due to social media censoring.
