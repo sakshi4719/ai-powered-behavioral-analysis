@@ -12,18 +12,20 @@ I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/Suici
 
 I took a 1000 of the newest posts from these 5 subreddits. So I collected a total of 5000 posts.    
 
-The information I collected from the posts is: 
-- id: ID of the post  
-- subreddit: Name of the subreddit where the post was posted  
-- title: The title of the post  
-- author: The username of the poster  
-- created_utc: Time the post was created, represented in Unix Time  
-- num_comments: The number of comments on the post  
-- upvote_ratio: The percentage of upvotes from all votes on the post  
-- score: The number of upvotes for the posts  
-- selftext: The posts’ selftext - an empty string if a link post  
-- permalink: A permalink for the post   
-
+The information I collected from the posts is:  
+| Field          | Description                                              |
+|---------------|----------------------------------------------------------|
+| `id`          | ID of the post                                           |
+| `subreddit`   | Name of the subreddit where the post was posted          |
+| `title`       | The title of the post                                    |
+| `author`      | The username of the poster                               |
+| `created_utc` | Time the post was created, represented in Unix Time      |
+| `num_comments`| The number of comments on the post                       |
+| `upvote_ratio`| The percentage of upvotes from all votes on the post     |
+| `score`       | The number of upvotes for the post                       |
+| `selftext`    | The post's selftext - an empty string if a link post     |
+| `permalink`   | A permalink for the post                                 |    
+  
 Then I created a structured .csv file containing all this data.  
 
 The 'selftext' field was processed by me in the following steps 
@@ -41,7 +43,7 @@ I carried out sentiment analysis on this processed text using **TextBlob**. The 
 |-------------------|----------------|
 | Positive | 42           |
 | Neutral      | 2019             |
-| Negative        | 2867              | 
+| Negative        | 2867              |   
 
 I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
@@ -58,7 +60,7 @@ Here is the plot generated after extracting the locations using the **Stanza** l
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
-Deliverables for:  
+**Deliverables**  
 Task 1  
 - [x]  A Python script that retrieves and stores filtered social media posts : **reddit-data.ipynb**
 - [x]  A cleaned dataset ready for NLP analysis : **processed-reddit_data.csv**
@@ -71,8 +73,32 @@ Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
 - [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html** , **ner_extracted_location.csv**
 
-Future Scope: 
+**Installation Guide**   
+
+Prerequisites 
+* Python 3.6 or later
+* `pip` (Python package installer)
+
+Steps   
+1. Navigate to your project directory and create a virtual environment.
+
+2. Install Required Python Packages:
+Install the necessary packages using `pip`.  Run this in a Jupyter Notebook.  
+`!pip install praw pandas nltk textblob transformers torch stanza folium scikit-learn`   
+
+3. Reddit API Credentials:
+- To use PRAW, you need Reddit API credentials.  
+- Create a Reddit developer account.  
+- Create a new app, and note down the `client_id`, `client_secret`, and `user_agent`.   
+
+4. Run the Scripts:  
+- Run `reddit-data.ipynb`. This will retrieve Reddit posts and save them to `processed-reddit_data.csv`.
+- Run `data-preprocessing.ipynb`. This script will perform sentiment analysis, calculate risk levels, and save the results in `distribution_of_posts.csv`.
+- Run `crisis-geoloc-mapping.ipynb`. This script will extract locations, geocode them, and generate `crisis_heatmap.html` and `ner_extracted_location.csv`.
+- Open `crisis_heatmap.html` in your web browser to view the heatmap.   
+          
+**Future Scope**  
 - This project can be extended to add slang and censored words that come up due to social media censoring.
 - A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
-- Fine-tune a BERT model on crisis-related labeled data.
-- Use RoBERTa/ DistilBERT which are trained on mental health datasets.
+- Fine-tune a BERT model on crisis-related labeled data to improve accuracy.
+- Experiment with RoBERTa/ DistilBERT which are pre-trained on mental health datasets.
