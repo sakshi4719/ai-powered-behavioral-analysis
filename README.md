@@ -46,11 +46,11 @@ I carried out sentiment analysis on this processed text using **TextBlob**. The 
 | Neutral      | 2019             |
 | Negative        | 2867              |   
 
-I was not satisfied with the results I got using TextBlob as around 40% of the posts were classified as neutral, which signalled to me that maybe this model is not suited towards a dataset of this type.
+I was not satisfied with the results I got using TextBlob as around 40% of the posts were classified as neutral, which signalled to me that maybe this model is might not be well-suited for a dataset of this type.
 Possibly because uses a lexicon-based approach, so it may struggle with nuanced or domain-specific language.  
 So, it often fails to capture sentiment in complex sentence structures or context-dependent phrases.  
 
-Hence I tried sentiment analysis and labeling again using a BERT-based model (nlptown/bert-base-multilingual-uncased-sentiment) which significantly reduced neutral classifications from 2019 (TextBlob) to 174, suggesting it captures sentiment more effectively.  
+Hence I tried sentiment analysis and labeling again using a **BERT-based model** (nlptown/bert-base-multilingual-uncased-sentiment) which significantly reduced neutral classifications from 2019 (TextBlob) to 174, suggesting it captures sentiment more effectively.  
 
 | Sentiment Label        | Number of Posts |
 |-------------------|----------------|
