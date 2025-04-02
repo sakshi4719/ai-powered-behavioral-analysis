@@ -45,6 +45,8 @@ I carried out sentiment analysis on this processed text using **TextBlob**. The 
 | Neutral      | 2019             |
 | Negative        | 2867              |   
 
+As I wanted to compare the results that I get using a BERT model, I used 
+
 I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
 I defined some crisis terms and classified the posts based on their similarity to the crisis terms.   
@@ -102,3 +104,4 @@ Install the necessary packages using `pip`.  Run this in a Jupyter Notebook.
 - A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
 - Fine-tune a BERT model on crisis-related labeled data to improve accuracy.
 - Experiment with RoBERTa/ DistilBERT which are pre-trained on mental health datasets.
+- Make a comprehensive list of crisi terms so the BERT model can perform better.
