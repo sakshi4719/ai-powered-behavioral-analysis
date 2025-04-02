@@ -38,14 +38,25 @@ The 'selftext' field was processed by me in the following steps
   
 This processed text was saved in the column called proctext.   
 
-I carried out sentiment analysis on this processed text using **TextBlob**. The posts were classified as Neutral, Postive, Negative
+I carried out sentiment analysis on this processed text using **TextBlob**. The posts were classified as Neutral, Postive, Negative.
+
 | Sentiment Label        | Number of Posts |
 |-------------------|----------------|
 | Positive | 42           |
 | Neutral      | 2019             |
 | Negative        | 2867              |   
 
-As I wanted to compare the results that I get using a BERT model, I used 
+I was not satisfied with the results I got using TextBlob as around 40% of the posts were classified as neutral, which signalled to me that maybe this model is not suited towards a dataset of this type.
+Possibly because uses a lexicon-based approach, so it may struggle with nuanced or domain-specific language.  
+So, it often fails to capture sentiment in complex sentence structures or context-dependent phrases.  
+
+Hence I tried sentiment analysis and labeling again using a BERT-based model (nlptown/bert-base-multilingual-uncased-sentiment) which significantly reduced neutral classifications from 2019 (TextBlob) to 174, suggesting it captures sentiment more effectively.  
+
+| Sentiment Label        | Number of Posts |
+|-------------------|----------------|
+| Positive | 270           |
+| Neutral      | 174             |
+| Negative        | 4484              | 
 
 I tried using **TF-IDF** to detect crisis terms but this approach did not work as it seemed to not be able to capture the emotional "weight" of words, since it only uses frequency to determine criss terms.  
 Then, I switched to using **BERT** tokenizer and model. I computed BERT embeddings of each post which are stored as a numpy array in the column bert_embeddings.  
