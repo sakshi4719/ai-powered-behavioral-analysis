@@ -73,6 +73,13 @@ Here is the plot generated after extracting the locations using the **Stanza** l
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
+**Future Scope**  
+- This project can be extended to add slang and censored words that come up due to social media censoring.
+- A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
+- Fine-tune a BERT model on crisis-related labeled data to improve accuracy.
+- Experiment with RoBERTa/ DistilBERT which are pre-trained on mental health datasets.
+- Make a comprehensive list of crisi terms so the BERT model can perform better.
+
 **Deliverables**  
 Task 1  
 - [x]  A Python script that retrieves and stores filtered social media posts : **reddit-data.ipynb**
@@ -109,10 +116,3 @@ Install the necessary packages using `pip`.  Run this in a Jupyter Notebook.
 - Run `data-preprocessing.ipynb`. This script will perform sentiment analysis, calculate risk levels, and save the results in `distribution_of_posts.csv`.
 - Run `crisis-geoloc-mapping.ipynb`. This script will extract locations, geocode them, and generate `crisis_heatmap.html` and `ner_extracted_location.csv`.
 - Open `crisis_heatmap.html` in your web browser to view the heatmap.   
-          
-**Future Scope**  
-- This project can be extended to add slang and censored words that come up due to social media censoring.
-- A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
-- Fine-tune a BERT model on crisis-related labeled data to improve accuracy.
-- Experiment with RoBERTa/ DistilBERT which are pre-trained on mental health datasets.
-- Make a comprehensive list of crisi terms so the BERT model can perform better.
