@@ -15,10 +15,8 @@ I took a 1000 of the newest posts from these 5 subreddits. So I collected a tota
 The information I collected from the posts is:  
 | Field          | Description                                              |
 |---------------|----------------------------------------------------------|
-| `id`          | ID of the post                                           |
 | `subreddit`   | Name of the subreddit where the post was posted          |
 | `title`       | The title of the post                                    |
-| `author`      | The username of the poster                               |
 | `created_utc` | Time the post was created, represented in Unix Time      |
 | `num_comments`| The number of comments on the post                       |
 | `upvote_ratio`| The percentage of upvotes from all votes on the post     |
