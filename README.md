@@ -23,7 +23,8 @@ The information I collected from the posts is:
 | `score`       | The number of upvotes for the post                       |
 | `selftext`    | The post's selftext - an empty string if a link post     |
 | `permalink`   | A permalink for the post                                 |    
-  
+
+(I did not save the user ID to protec users' privacy)  
 Then I created a structured .csv file containing all this data.  
 
 The 'selftext' field was processed by me in the following steps 
