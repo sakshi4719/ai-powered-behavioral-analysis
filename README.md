@@ -103,9 +103,9 @@ Steps
 
 2. Install Required Python Packages:
 Install the necessary packages using `pip`.  Run this in a Jupyter Notebook.  
-`!pip install praw pandas nltk textblob transformers torch stanza folium scikit-learn`   
+REQUIREMENTS.TXT
 
-3. Reddit API Credentials:
+4. Reddit API Credentials:
 - To use PRAW, you need Reddit API credentials.  
 - Create a Reddit developer account.  
 - Create a new app, and note down the `client_id`, `client_secret`, and `user_agent`.   
