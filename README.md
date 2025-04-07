@@ -1,7 +1,7 @@
 ### AI-Powered Behavioral Analysis for Suicide Prevention, Substance Use, and Mental Health Crisis Detection with Longitudinal Geospatial Crisis Trend Analysis
 
 I used  **PRAW**, the Python Reddit API Wrapper to get posts from Reddit.    
-https://praw.readthedocs.io/en/latest/code_overview/models/submission.html   
+[PRAW Documentation](https://praw.readthedocs.io/en/latest/code_overview/models/submission.html)  
 
 I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/SuicideWatch, r/mentalhealth.  
 - r/depression – A space for individuals to share experiences, seek support, and discuss coping with depression.  
@@ -24,7 +24,7 @@ The information I collected from the posts is:
 | `selftext`    | The post's selftext - an empty string if a link post     |
 | `permalink`   | A permalink for the post                                 |    
 
-(I did not save the user ID to protec users' privacy)  
+(I did not save the user ID to protec users' privacy.)  
 Then I created a structured .csv file containing all this data.  
 
 The 'selftext' field was processed by me in the following steps 
@@ -90,7 +90,7 @@ Task 2
 
 Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
-- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html** , **ner_extracted_location.csv**
+- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html**, **ner_extracted_location.csv**
 
 **Installation Guide**   
 
