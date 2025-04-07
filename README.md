@@ -15,6 +15,7 @@ I took a 1000 of the newest posts from these 5 subreddits. So a total of 5000 po
 The information I collected from the posts is:  
 | Field          | Description                                              |
 |---------------|----------------------------------------------------------|
+| `id`          | ID of the post                                           |
 | `subreddit`   | Name of the subreddit where the post was posted          |
 | `title`       | The title of the post                                    |
 | `created_utc` | Time the post was created, represented in Unix Time      |
@@ -24,7 +25,7 @@ The information I collected from the posts is:
 | `selftext`    | The post's selftext - an empty string if a link post     |
 | `permalink`   | A permalink for the post                                 |    
 
-(I did not save the user ID to protec users' privacy.)  
+(I did not save the user ID to protect users' privacy.)  
 Then I created a structured .csv file containing all this data.  
 
 The 'selftext' field was processed by me in the following steps 
@@ -68,7 +69,7 @@ Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to
 | Low Concern      | 913             |
 | High-Risk        | 45              |   
 
-I extracted the locations using the **Stanza** library and plotted a heatmap using **Folium**.  
+I extracted the locations using **Stanza** and plotted a heatmap using **Folium**.  
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 **Future Scope**  
