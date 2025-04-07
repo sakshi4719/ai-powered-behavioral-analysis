@@ -10,7 +10,7 @@ I decided to target 5 subreddits - r/depression, r/anxiety, r/addiction, r/Suici
 - r/SuicideWatch – A support community for individuals experiencing suicidal thoughts and seeking help.  
 - r/mentalhealth – Discusses various mental health conditions, coping mechanisms, and general well-being.  
 
-I took a 1000 of the newest posts from these 5 subreddits. So I collected a total of 5000 posts.    
+I took a 1000 of the newest posts from these 5 subreddits. So a total of 5000 posts.    
 
 The information I collected from the posts is:  
 | Field          | Description                                              |
@@ -68,8 +68,7 @@ Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to
 | Low Concern      | 913             |
 | High-Risk        | 45              |   
 
-Here is the plot generated after extracting the locations using the **Stanza** library: 
-
+I extracted the locations using the **Stanza** library and plotted a heatmap using **Folium**.  
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
 **Future Scope**  
