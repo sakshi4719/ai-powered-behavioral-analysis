@@ -68,7 +68,7 @@ Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to
 | Low Concern      | 913             |
 | High-Risk        | 45              |   
 
-Here is the plot generated after extracting the locations using the **Stanza** library 
+Here is the plot generated after extracting the locations using the **Stanza** library: 
 
 ![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
 
