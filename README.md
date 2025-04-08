@@ -42,9 +42,9 @@ I carried out sentiment analysis on this processed text using **TextBlob**. The 
 
 | Sentiment Label        | Number of Posts |
 |-------------------|----------------|
-| Positive | 42           |
-| Neutral      | 2019             |
-| Negative        | 2867              |   
+| Positive          | 42             |
+| Neutral           | 2019           |
+| Negative          | 2867           |   
 
 I was not satisfied with the results I got using TextBlob as around 40% of the posts were classified as neutral, which signalled to me that maybe this model is might not be well-suited for a dataset of this type.
 Possibly because uses a lexicon-based approach, so it may struggle with nuanced or domain-specific language.  
@@ -89,7 +89,7 @@ Task 1
 - [x]  A cleaned dataset ready for NLP analysis : **processed-reddit_data.csv**
 
 Task 2
-- [x] A script that classifies posts based on sentiment and risk level : **data-processing.ipynb** 
+- [x] A script that classifies posts based on sentiment and risk level : **data-processing-and-risk.ipynb** , **sentiment-analysis.ipynb**
 - [x] A table or plot showing the distribution of posts by sentiment and risk category : **distribution_of_posts.csv**   
 
 Task 3
