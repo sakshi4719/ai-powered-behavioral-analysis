@@ -70,9 +70,13 @@ Lastly, I saved selftext, proctext, risk_level, sentiment and sentiment_label to
 | High-Risk        | 45              |   
 
 I extracted the locations using **Stanza** and plotted a heatmap using **Folium**.  
-![Results](https://github.com/user-attachments/assets/c296bc0e-2726-4b37-9c6b-974ecb9c65e5)
+![image](https://github.com/user-attachments/assets/6b465a73-f382-44f7-af95-fe0c922f8286)
 
-**Future Scope**  
+These are top 5 places where crisis discussions were happening.
+![image](https://github.com/user-attachments/assets/2b8fa731-a418-4a5a-b484-53a78ea02df7)
+
+
+**Future Refinements**  
 - This project can be extended to add slang and censored words that come up due to social media censoring.
 - A pipeline can also be implemented for continuous tracking and trend forecasting over multiple social media platforms.
 - Fine-tune a BERT model on crisis-related labeled data to improve accuracy.
@@ -90,7 +94,7 @@ Task 2
 
 Task 3
 - [x] A Python script that geocodes posts and generates a heatmap of crisis discussions : **crisis-geoloc-mapping.ipynb**
-- [x] A visualization of regional distress patterns in the dataset : **crisis_heatmap.html**, **ner_extracted_location.csv**
+- [x] A visualization of regional distress patterns in the dataset : **ner_extracted_location.csv**,  **crisis_heatmap.html**, **top_5_crisis_locations.html**
 
 **Installation Guide**   
 
