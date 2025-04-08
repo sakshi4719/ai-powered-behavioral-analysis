@@ -89,7 +89,7 @@ Task 1
 - [x]  A cleaned dataset ready for NLP analysis : **processed-reddit_data.csv**
 
 Task 2
-- [x] A script that classifies posts based on sentiment and risk level : **data-preprocessing.ipynb** 
+- [x] A script that classifies posts based on sentiment and risk level : **data-processing.ipynb** 
 - [x] A table or plot showing the distribution of posts by sentiment and risk category : **distribution_of_posts.csv**   
 
 Task 3
